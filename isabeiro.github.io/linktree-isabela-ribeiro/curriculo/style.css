@@ -1,0 +1,56 @@
+body {
+    background: rgb(147 152 160);
+    font-family: calibri;
+    color: rgb(7, 6, 15);
+    margin: 0%;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+}
+
+.profile {
+    text-align: center;
+}
+
+.foto {
+    width: 250px;
+    border: 2px solid #777777;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 0%;
+    font-family: 'Cabin', sans-serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin-top: 0%;
+    font-family: "Crimson Text', serif";
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+.discription {
+    display: block;
+}
+
+.social-icons {
+    width: 20px;
+}
+
+.footer {
+    background: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+ul {
+    margin: 8px 0 16px;
+}

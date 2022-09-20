@@ -1,0 +1,454 @@
+@charset "UTF-8";
+:root {
+  --color-primary: #FFFFFF;
+  --color-dark-grey: #707070;
+  --color-light-grey: #888888;
+  --color-dark: #00000029;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--color-light-grey);
+}
+
+/*******************
+      HEADER        
+*******************/
+header {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-primary);
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+header .backgroundImg {
+  position: absolute;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+  background-color: var(--color-dark-grey);
+  width: 100%;
+  height: 350px;
+}
+header .firstSentence {
+  font-weight: 100;
+  font-size: 21px;
+  padding-top: 50px;
+}
+header h1 {
+  font-size: 46px;
+  font-weight: 700;
+}
+header .secondSentence {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 30px;
+}
+header .buttons {
+  width: 750px;
+  justify-content: space-between;
+  display: flex;
+}
+header .buttons button {
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--color-dark);
+  color: var(--color-light-grey);
+  background-color: var(--color-primary);
+}
+
+/************************
+      FORM ALGORITHM            
+************************/
+.container .formulario {
+  width: 900px;
+  display: flex;
+  align-content: space-between;
+}
+.container .formulario .section-one {
+  font-size: 12px;
+  width: 65%;
+  padding: 30px 55px 30px 0;
+}
+.container .formulario .section-one h2 {
+  font-size: 20px;
+  font-weight: 100;
+  padding-bottom: 25px;
+}
+.container .formulario .section-one p {
+  line-height: 1.3;
+}
+.container .formulario .subForm {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.container .formulario .subForm .inputError {
+  border: 2px solid rgb(192, 64, 64);
+  font-style: italic;
+  font-weight: bold;
+}
+.container .formulario .subForm label {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  font-size: 11px;
+}
+.container .formulario .subForm label input {
+  padding: 5px 0;
+  margin: 5px 0;
+  border: 1px solid var(--color-light-grey);
+}
+.container .formulario .subForm label input[type=number]::-webkit-outer-spin-button,
+.container .formulario .subForm label input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.container .formulario .subForm .labelGender {
+  display: flex;
+  flex-direction: row;
+  border-radius: 50%;
+}
+.container .formulario .subForm .labelGender .checkbox {
+  border: 1px solid var(--color-light-grey);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container .formulario .subForm .labelGender .checked {
+  position: relative;
+}
+.container .formulario .subForm .labelGender .checked::after {
+  position: absolute;
+  top: 1.4px;
+  left: 1.4px;
+  display: block;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-dark-grey);
+}
+.container .formulario .subForm .labelGender .erroCheckbox {
+  border: 1px solid red;
+}
+.container .formulario .subForm .labelGender .masculino {
+  padding-right: 50px;
+}
+.container .formulario .subForm .submit {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-light-grey);
+  color: var(--color-light-grey);
+  padding: 9px;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.container .formulario .thankyou {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/************************
+      PRODUCT LIST            
+************************/
+.container .productsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .productsList .title {
+  width: 100%;
+}
+.container .productsList .title h3::before,
+.container .productsList .title h3::after {
+  display: block;
+  content: "";
+  width: 40%;
+  height: 2px;
+  background-color: var(--color-light-grey);
+  margin: 20px 5px;
+}
+.container .productsList .title h3 {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 5px 0;
+}
+.container .productsList .productsDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 900px;
+  font-size: 12px;
+}
+.container .productsList .productsDescription .product {
+  width: 200px;
+  padding-top: 35px;
+}
+.container .productsList .productsDescription .product .img {
+  border: 1px solid var(--color-light-grey);
+  height: 150px;
+  width: 200px;
+}
+.container .productsList .productsDescription .product .description {
+  display: flex;
+  flex-direction: column;
+}
+.container .productsList .productsDescription .product .description .nomeDoProduto {
+  padding: 12px 0;
+  font-size: 14px;
+}
+.container .productsList .productsDescription .product .description p {
+  font-size: 11px;
+}
+.container .productsList .productsDescription .product .description .prevPrice {
+  padding: 8px 0px;
+  font-size: 11px;
+}
+.container .productsList .productsDescription .product .description .price {
+  font-size: 16px;
+  font-weight: bold;
+}
+.container .productsList .productsDescription .product .description .opPrice {
+  padding: 8px 0px;
+  font-size: 11px;
+}
+.container .productsList .productsDescription .product .description button {
+  background-color: var(--color-primary);
+  color: var(--color-light-grey);
+  border: 1px solid var(--color-light-grey);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.container .productsList .moreButton {
+  background-color: var(--primary-color);
+  color: var(--color-light-grey);
+  font-size: 14px;
+  padding: 7px 25px;
+  margin: 45px;
+  border: 1px solid var(--color-light-grey);
+  border-radius: 4px;
+}
+
+/************************
+         SHARE            
+************************/
+.container .share {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .share .title {
+  width: 100%;
+}
+.container .share .title h4::before,
+.container .share .title h4::after {
+  display: block;
+  content: "";
+  width: 39%;
+  height: 2px;
+  background-color: var(--color-light-grey);
+  margin: 20px 5px;
+}
+.container .share .title h4 {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 25px 0 30px 0;
+}
+.container .share .title span {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+.container .share form {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .share form .submit {
+  align-self: center;
+  margin: 40px;
+  background-color: var(--color-primary);
+  color: var(--color-light-grey);
+  border: 1px solid var(--color-light-grey);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 8px 80px;
+}
+.container .share form .labelShare {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .share form .labelShare .inputError {
+  border: 2px solid rgb(192, 64, 64);
+  font-style: italic;
+  font-weight: bold;
+}
+.container .share form .labelShare label {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  width: 40%;
+  padding-right: 30px;
+}
+.container .share form .labelShare label input {
+  margin-top: 10px;
+  padding: 5px;
+}
+.container .share .thankyou {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/************************
+         FOOTER            
+************************/
+.credit {
+  height: 250px;
+  width: 100%;
+  background-color: var(--color-dark-grey);
+  -webkit-clip-path: polygon(0 29%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 29%, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.credit span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  color: var(--color-primary);
+  font-size: 11px;
+  padding-top: 40px;
+}
+.credit span p {
+  padding: 5px;
+}
+
+/************************
+RESPONSIVO-MÁX 420PX      
+************************/
+@media (max-width: 420px) {
+  * body {
+    width: 420px;
+  }
+  .header {
+    position: relative;
+    align-items: flex-start;
+  }
+  .header .firstSentence,
+.header h1 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .header .secondSentence {
+    padding: 10px 0 35px 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .header .buttons {
+    position: absolute;
+    top: 200px;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-right: 12px;
+  }
+  .header .buttons button {
+    width: 150px;
+    margin: 10px;
+    border: 1px solid var(--color-dark-grey);
+    padding: 10px 0px;
+  }
+  .container .formulario {
+    flex-direction: column;
+    width: 90%;
+  }
+  .container .formulario .section-one {
+    width: 100%;
+    padding: 45px 0;
+  }
+  .container .formulario .subForm {
+    width: 100%;
+  }
+  .container .productsList {
+    width: 420px;
+  }
+  .container .productsList .title h3::before,
+.container .productsList .title h3::after {
+    width: 29%;
+  }
+  .container .productsList .productsDescription {
+    width: auto;
+  }
+  .container .productsList .productsDescription .product {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+  .container .productsList .productsDescription .product .img {
+    margin: 0 12px;
+  }
+  .container .productsList .productsDescription .product .description {
+    height: 150px;
+    justify-content: space-between;
+  }
+  .container .productsList .productsDescription .product .description .nomeDoProduto {
+    padding-top: 0;
+  }
+  .container .productsList .productsDescription .product .description p {
+    display: none;
+  }
+  .container .productsList .productsDescription .product .description button {
+    width: 180px;
+  }
+  .container .share {
+    width: 100%;
+  }
+  .container .share .title span {
+    padding: 0 12px;
+    text-align: center;
+  }
+  .container .share form {
+    width: 100%;
+    padding: 20px 12px;
+  }
+  .container .share form .labelShare {
+    flex-direction: column;
+  }
+  .container .share form .labelShare label {
+    width: auto;
+    padding: 0;
+  }
+  .container .share form .labelShare label input {
+    margin: 10px 0 15px 0;
+  }
+}/*# sourceMappingURL=style.css.map */
