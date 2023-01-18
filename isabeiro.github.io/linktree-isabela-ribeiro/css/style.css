@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Sofia+Sans+Condensed:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+
 * {
     margin: 0%;
     padding: 0%;
+    font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 html, body {
@@ -8,28 +11,27 @@ html, body {
 }
 
 body{
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    background: rgb(54,77,204);
-    background: linear-gradient(180deg, rgba(54,77,204,1) 0%, rgba(19,35,124,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(65, 65, 65);
+    background: linear-gradient(180deg, rgba(208,220,249,1) 0%, rgba(111,146,181,1) 50%, rgba(31,45,191,1) 100%);
 }
 
 .avatar {
     width: 100px;
     border-radius: 50px;
-    border: 3px solid white;
-    box-shadow: 0 0 20px white;
+    border: 1px solid rgb(99, 96, 96);
 }
 
 h1 {
-    font-family: 'Architects Daughter', cursive;
-    font-weight: 100;
+    font-weight: 400px;
     font-size: 24px;
     margin-bottom: 2px;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .profile {
@@ -46,6 +48,7 @@ h2 {
 
 .social img {
     width: 33px;
+    padding: 0 25px;
 }
 
 .links-list {
@@ -53,29 +56,36 @@ h2 {
 }
 
 .links-list li {
+    font-size: 18px;
+    width: 400px;
     margin: 10px 20px;
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 .links-list li a {
     display: block;
-    background: white;
+    text-align: center;
     padding: 15px 20px;
-    border-radius: 4px;
     text-decoration: none;
-    color: rgb(54,77,204);
+    color: rgb(10, 18, 65);
     font-weight: bold;
 }
 
 .links-list li a span {
-    color: gray;
+    color: #2c2525;
     display: block;
     margin-top: 10px;
 }
 
-.iluminados {
-    margin-bottom: 40px;
+@media (max-width: 443px) {
+    .links-list li {
+        width: 350px;
+    }
 }
 
-.iluminados li a {
-    box-shadow: 0 0 20px white;
+@media (max-width: 393px) {
+    .links-list li {
+        width: 250px;
+    }
 }
